@@ -19,7 +19,7 @@ def isValidBracket(s: str) -> bool:
         if c in pairs:
             # 如果 
             # 1.栈是空的(说明现在有一个右括号，但是之前并没有匹配的左括号) 
-            # or 
+            # or I
             # 2.栈非空， 但栈的顶端（最后进入的左括号）和当前右括号的影射不匹配
             # 都返回False
             if not stack or stack[-1] != pairs[c]:
@@ -33,4 +33,4 @@ def isValidBracket(s: str) -> bool:
     return not stack
 
 s = "()[]{}"
-print(isValid(s))
+print(isValidBracket(s))
